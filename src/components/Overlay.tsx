@@ -10,15 +10,15 @@ export default function Overlay() {
   const { scrollYProgress } = useScroll();
 
   // Section 1: Center "ABHISHEK CHOUDHARY" & "STUDENT & ENTREPRENEUR"
-  // Map relative coordinates to total global scroll timeline
-  // Appears at 10% of Hero scroll (0.05 global). Stays active until Hero end (0.50 global).
+  // Map relative coordinates to total global scroll timeline (Hero height is first 0 to 0.50 range)
+  // Appears centered at 10% scroll (0.05 global). Starts moving upward at 20% scroll (0.10 global). Stays active until Hero end (0.50 global).
   const opacity1 = useTransform(scrollYProgress, [0, 0.04, 0.05, 0.45, 0.50], [0, 0, 1, 1, 0]);
-  const y1 = useTransform(scrollYProgress, [0.05, 0.15, 0.45], [0, 0, -280]);
+  const y1 = useTransform(scrollYProgress, [0.05, 0.10, 0.45], [0, 0, -280]);
 
   // Section 2: "BUILDING IMPOSSIBLE THINGS"
-  // Shows up at 30% of Hero scroll (0.15 global). Disappears by 60% of Hero scroll (0.30 global).
-  const opacity2 = useTransform(scrollYProgress, [0.12, 0.15, 0.28, 0.30], [0, 1, 1, 0]);
-  const y2 = useTransform(scrollYProgress, [0.12, 0.15, 0.28, 0.30], [50, 0, 0, -50]);
+  // Shows up at 40% of Hero scroll (0.20 global). Disappears by 60% of Hero scroll (0.30 global).
+  const opacity2 = useTransform(scrollYProgress, [0.17, 0.20, 0.28, 0.30], [0, 1, 1, 0]);
+  const y2 = useTransform(scrollYProgress, [0.17, 0.20, 0.28, 0.30], [50, 0, 0, -50]);
 
   // Section 3: "Experiments. Businesses. Experiences. Systems."
   // Shows up at 70% of Hero scroll (0.35 global). Stays visible until Hero end (0.50 global).
