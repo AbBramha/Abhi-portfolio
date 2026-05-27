@@ -41,7 +41,7 @@ export default function Overlay() {
 
         <motion.div 
           style={{ opacity: opacity2, y: y2 }}
-          className="absolute left-8 md:left-24 top-1/2 -translate-y-1/2"
+          className="absolute left-8 md:left-24 top-[60%] md:top-1/2 -translate-y-1/2"
         >
           <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-tight text-[#92e8ee]">
             Building <br/>
@@ -51,7 +51,7 @@ export default function Overlay() {
 
         <motion.div 
           style={{ opacity: opacity3, y: y3 }}
-          className="absolute left-8 md:left-24 top-1/2 -translate-y-1/2"
+          className="absolute left-8 md:left-24 top-[60%] md:top-1/2 -translate-y-1/2"
         >
           <h2 className="text-4xl md:text-6xl font-display font-extrabold leading-tight text-[#92e8ee]">
             Experiments. <br/>
